@@ -13,5 +13,4 @@
    <select id="getUsers" parameterType="org.wang.entity.User" resultType="org.wang.entity.User">
            SELECT * FROM USER  WHERE  userId>#{userId}
    </select>
-
 </mapper>
