@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.wang.mapper.UserMapper">
+    <select id="getUserById"  parameterType="org.wang.entity.User" resultType="org.wang.entity.User">
+        select * from user where userId = #{userId}
+    </select>
+    <insert id="insertUser" parameterType="org.wang.entity.User">
+        INSERT INTO user(userName,userPass,userAge) VALUES(#{userName},#{userPass},#{userAge})
+    </insert>
+
+   <select id="getUsers" parameterType="org.wang.entity.User" resultType="org.wang.entity.User">
+           SELECT * FROM USER  WHERE  userId>#{userId}
+   </select>
+
+</mapper>
